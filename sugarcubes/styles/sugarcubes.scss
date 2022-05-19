@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* variables */
+:root{
+    /* typography */
+    --sc-font: 'Inter', sans-serif;
+    --sc-font-mono: monospace;
+
+    /* colors */
+    --sc-primary-0: #3C4BD2;
+    --sc-primary-1: #27339E;
+    --sc-primary-2: #151C5E;
+
+    --sc-secondary-0: #7E3CD2;
+    --sc-secondary-1: #6128AA;
+    --sc-secondary-2: #3A1866;
+
+    --sc-danger-0: #C02A2A;
+    --sc-danger-1: #A52020;
+    --sc-danger-2: #791212;
+    --sc-warning-0: #D18226;
+    --sc-warning-1: #B16B1A;
+    --sc-warning-2: #663E10;
+    --sc-success-0: #47B535;
+    --sc-success-1: #308A21;
+    --sc-success-2: #17570D;
+
+    --sc-light-0: #ECEDF4;
+    --sc-light-1: #E3E4ED;
+    --sc-light-2: #D3D3E2;
+    --sc-light-3: #B2B5C9;
+    --sc-dark-0: #202023;
+    --sc-dark-1: #26262F;
+    --sc-dark-2: #323244;
+    --sc-dark-3: #3A3A5A;
+
+    --sc-color-red: #F23434;
+    --sc-color-pink: #F349AF;
+    --sc-color-purple: #BD40F8;
+    --sc-color-blue: #316FE8;
+    --sc-color-turquoise: #1AC3A5;
+    --sc-color-lime: #A3D43A;
+    --sc-color-yellow: #F1C422;
+    --sc-color-orange: #EB6E39;
+    
+    --sc-gradient-0: linear-gradient(90deg, #3C4BD2 0%, #7E3CD2 100%);
+    --sc-gradient-1: linear-gradient(90deg, #27339E 0%, #6128AA 100%);
+    --sc-gradient-2: linear-gradient(90deg, #151C5E 0%, #3A1866 100%);
+
+
+}
+
+/* typography */
+
+.sc-text-hero{
+    font-size: 42px;
+    font-weight: 800;
+    opacity: 0.95;
+}
+
+.sc-text-title{
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0.9;
+}
+
+.sc-text-subtitle{
+    font-size: 24px;
+    font-weight: 500;
+    opacity: 0.85;
+}
+
+.sc-text-caption{
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.sc-text-body{
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+.sc-text-muted{
+    font-size: 13px;
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+/* core config */
+
+
+body{
+    font-family: var(--sc-font);
+}
+
+/* layout */
+
+.sc-container{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px;
+    &.sc-center{
+        align-items: center;
+        justify-content: center;
+    }
+    &.sc-top-left{
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    &.sc-bottom-right{
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+    &.sc-top-right{
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+    &.sc-bottom-left{
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+    &.sc-top-center{
+        align-items: center;
+        justify-content: flex-start;
+    }
+    &.sc-bottom-center{
+        align-items: center;
+        justify-content: flex-end;
+    }
+    &.sc-center-left{
+        align-items: flex-start;
+        justify-content: center;
+    }
+    &.sc-center-right{
+        align-items: flex-end;
+        justify-content: center;
+    }
+}
+
+.sc-fluid{
+    width: 100%;
+}
+
+.sc-grid{
+    display: grid;
+    &.centered{
+        div{
+            margin: auto;
+        }
+    }
+    &.c-2{
+        grid-template-columns: 50% 50%;
+    }
+    &.c-3{
+        grid-template-columns: 33.33% 33.34% 33.33%;
+    }
+    &.c-4{
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+    &.c-5{
+        grid-template-columns: 20% 20% 20% 20% 20%;
+    }
+}
+
+.sc-table{
+    display: table;
+}
+
+.sc-row{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    div,a,img{
+        margin: 0 8px;
+    }
+    div:first-of-type{
+        margin-left: 0;
+    }
+    div:last-of-type{
+        margin-right: 0;
+    }
+}
+
+.sc-column{
+    display: flex;
+    flex-direction: column;
+    div,a,img{
+        margin: 8px 0;
+    }
+    div:first-of-type{
+        margin-top: 0;
+    }
+    div:last-of-type{
+        margin-bottom: 0;
+    }
+}
+
+.sc-br-8{
+    height: 8px;
+}
+.sc-br-16{
+    height: 16px;
+}
+.sc-br-24{
+    height: 24px;
+}
+.sc-br-32{
+    height: 32px;
+}
+.sc-br-40{
+    height: 40px;
+}
+
+/* core componenets */
+
+//Button
+.sc-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 10px;
+    width: fit-content;
+    height: 32px;
+    border-radius: 4px;
+    background-color: var(--sc-dark-3);
+    color: rgba(255,255,255,0.8);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    line-height: 22px;
+    cursor: pointer;
+
+    &:hover{
+        background-color: var(--sc-light-3);
+    }
+    &:active{
+        background-color: var(--sc-light-2);
+    }
+    &:focus{
+        border: 1px solid var(--sc-primary-1);
+    }
+
+    &.outlined{
+        background: transparent;
+        border: 4px solid var(--sc-dark-3);
+        &:hover{
+            background: var(--sc-dark-1);
+            color: #ffffff;
+        }
+        &.primary{
+            color: var(--sc-primary-0);
+            border-color: var(--sc-primary-0);
+            &:hover{
+                background: var(--sc-primary-1);
+                color: #ffffff;
+            }
+        }
+        &.secondary{
+            color: var(--sc-secondary-0);
+            border-color: var(--sc-secondary-0);
+            &:hover{
+                background: var(--sc-secondary-1);
+                color: #ffffff;
+            }     
+        }
+        &.danger{
+            color: var(--sc-danger-0);
+            border-color: var(--sc-danger-0);
+            &:hover{
+                background: var(--sc-danger-1);
+                color: #ffffff;
+            }
+        }
+        &.warning{
+            color: var(--sc-warning-0);
+            border-color: var(--sc-warning-0);
+            &:hover{
+                background: var(--sc-warning-1);
+                color: #ffffff;
+            }
+        }
+        &.success{
+            color: var(--sc-success-0);
+            border-color: var(--sc-success-0);
+            &:hover{
+                background: var(--sc-success-1);
+                color: #ffffff;
+            }
+        }
+        &.light{
+            color: var(--sc-light-0);
+            border-color: var(--sc-light-0);
+            &:hover{
+                background: var(--sc-light-1);
+                color: #0f0f0f;
+            }
+        }
+    }
+}
+
+// Navbar 
+.sc-navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 8%;
+    box-sizing: border-box;
+    height: 96px;
+    background: var(--sc-dark-3);
+    color: #ffffff;
+    .brand{
+        text-decoration: none;
+        color: inherit;
+    }
+    .navlinks{
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        li a{
+            text-decoration: none;
+            color: inherit;
+            margin: 0 24px;
+            &:hover{
+                opacity: 0.5;
+            }
+        }
+    }
+    &.fixed{
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+        &.top{
+            top: 0;
+        }
+        &.bottom{
+            bottom: 0;
+        }
+    }
+}
+
+// Card
+.sc-card{
+    width: 480px;
+    padding: 32px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background: var(--sc-light-2);
+    div{
+        margin: 24px auto;
+    }
+    div:first-of-type{
+        margin-top: 0px;
+    }
+    div:last-of-type{
+        margin-bottom: 0px;
+    }
+}
+
+/* Backgrounds and Colors */
+
+.sc-bg-primary{
+    background-color: var(--sc-primary-0);
+    color: #ffffff;
+    &.sc-btn{
+        &:hover{
+            background-color: var(--sc-primary-1);
+        }
+        &:active{
+            background-color: var(--sc-primary-2);
+        }
+    }
+}
+
+.sc-bg-secondary{
+    background-color: var(--sc-secondary-0);
+    color: #ffffff;
+    &.sc-btn{
+        &:hover{
+            background-color: var(--sc-secondary-1);
+        }
+        &:active{
+            background-color: var(--sc-secondary-2);
+        }
+    }
+}
+
+.sc-bg-light{
+    background-color: var(--sc-light-0);
+    color: #0f0f0f;
+    &.sc-btn{
+        &:hover{
+            background-color: var(--sc-light-1);
+        }
+        &:active{
+            background-color: var(--sc-light-2);
+        }
+    }
+}
+
+.sc-bg-dark{
+    background-color: var(--sc-dark-0);
+    color: #ffffff;
+    &.sc-btn{
+        &:hover{
+            background-color: var(--sc-dark-1);
+        }
+        &:active{
+            background-color: var(--sc-dark-2);
+        }
+    }
+}
+
+.sc-bg-danger{
+    background-color: var(--sc-danger-0);
+    color: #ffffff;
+    &.sc-btn{
+        &:hover{
+            background-color: var(--sc-danger-1);
+        }
+        &:active{
+            background-color: var(--sc-danger-2);
+        }
+    }
+}
+
+.sc-bg-warning{
+    background-color: var(--sc-warning-0);
+    color: #ffffff;
+    &.sc-btn{
+        &:hover{
+            background-color: var(--sc-warning-1);
+        }
+        &:active{
+            background-color: var(--sc-warning-2);
+        }
+    }
+}
+
+.sc-bg-success{
+    background-color: var(--sc-success-0);
+    color: #ffffff;
+    &.sc-btn{
+        &:hover{
+            background-color: var(--sc-success-1);
+        }
+        &:active{
+            background-color: var(--sc-success-2);
+        }
+    }
+}
+
+.sc-bg-gradient{
+    background: var(--sc-gradient-0);
+    color: #ffffff;
+    &.sc-btn{
+        &:hover{
+            background: var(--sc-gradient-1);
+        }
+        &:active{
+            background: var(--sc-gradient-2);
+        }
+    }
+}
+
+/* MOBILE RESPONSIVE CODE */
+@media screen and (max-width: 800px){
+//Adjustments to elements (cards & toasts become fluid on a mobile screen)
+    .sc-card{
+        width: 100%;
+    }
+
+
+// Grid Configuration Classes
+    .sc-grid{
+        &.c-1,&.c-2,&.c-3,&.c-4,&.c-5{
+        grid-template-columns: 100%;
+        }
+        &.mb-2{
+            grid-template-columns: 50% 50%;
+        }
+        &.mb-3{
+            grid-template-columns: 33.33% 33.34% 33.33%;
+        }
+        &.mb-4{
+            grid-template-columns: 25% 25% 25% 25%;
+        }
+    }
+}

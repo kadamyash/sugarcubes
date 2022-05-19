@@ -1,0 +1,9 @@
+@import "sugarcubes/styles/sugarcubes.css";
+
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--sc-light-0);
+    color: #0f0f0f;
+}
+
