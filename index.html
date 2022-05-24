@@ -8,27 +8,31 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="root.css">
     <!-- SUGARCUBES IMPORTS -->
-    <script src="sugarcubes/scripts/sugarcubes.js"></script>
+    <script src="sugarcubes/scripts/sugarcubes.js" defer></script>
     <link rel="stylesheet" href="sugarcubes/styles/sugarcubes.css">
 </head>
 <body>
-    <nav class="sc-navbar">
+    <nav class="sc-navbar space-between mb-auto">
         <a href="#" class="brand sc-text-subtitle">sugarcubes</a>
         <ul class="navlinks sc-text-caption">
             <li><a href="#">Link#1</a></li>
             <li><a href="#">Link#2</a></li>
             <li><a href="#">Link#3</a></li>
         </ul>
+        <div class="burger" id="burger">
+            <div class="burger-line"></div>
+        </div>
     </nav>
     <div class="sc-container sc-fluid">
         <div class="sc-text-hero">Core Elements</div>
-        <div class="sc-br-24"></div>
+        <div class="sc-br-24"></div> 
         <div class="sc-text-title">Buttons</div>
         <div class="sc-br-24"></div>
         <div class="sc-row">
             <div class="sc-btn">Default</div>
             <div class="sc-btn sc-bg-primary">Primary</div>
             <div class="sc-btn sc-bg-secondary">Secondary</div>
+            <div class="sc-btn disabled">Disabled</div>
         </div>
         <div class="sc-br-8"></div>
         <div class="sc-row">
@@ -38,9 +42,9 @@
         </div>
         <div class="sc-br-8"></div>
         <div class="sc-row">
-            <div class="sc-btn sc-bg-danger">Dark</div>
-            <div class="sc-btn sc-bg-warning">Light</div>
-            <div class="sc-btn sc-bg-success">Gradient</div>
+            <div class="sc-btn sc-bg-danger">Danger</div>
+            <div class="sc-btn sc-bg-warning">Warning</div>
+            <div class="sc-btn sc-bg-success">Success</div>
         </div>
         <div class="sc-br-8"></div>
         <div class="sc-row">
@@ -51,7 +55,7 @@
         <div class="sc-br-24"></div>
         <div class="sc-text-title">Cards</div>
         <div class="sc-br-24"></div>
-        <div class="sc-row">
+        <div class="sc-grid c-2 sc-fit">
             <div class="sc-card">
                 <div class="sc-text-subtitle">Card Title</div>
                 <div class="sc-text-body">
